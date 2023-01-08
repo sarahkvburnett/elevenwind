@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+<head>
+    {% include "meta.njk" %}
+    {% block head %}{% endblock %}
+    <title>{{ title }} - {{ contact.name }}</title>
+</head>
+<body>
+{% include "header.njk" %}
+<main>
+    {% block main %}{% endblock %}
+</main>
+{% include "footer.njk" %}
+</body>
+</html>

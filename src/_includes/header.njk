@@ -1,0 +1,22 @@
+<header class="container">
+    <img class="mb-2" src="{{ 'ar-digital-logo.png' | image }}"/>
+    <nav>
+        <ul id="menu">
+            <li><a href="{{ '/' | url }}">Home</a></li>
+            <li><a href="{{ '/services' | url }}">Services</a></li>
+            <li><a href="{{ '/client-work' | url }}">Client Work</a></li>
+            <li><a href="{{ '/the-team' | url }}">The Team</a></li>
+            <li><a href="{{ '/our-values' | url }}">Our Values</a></li>
+            <li><a href="{{ '/contact' | url }}">Contact</a></li>
+        </ul>
+        <div id="social-links">
+            {% if contact.facebook %}<a href="{{ contact.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>{% endif %}
+            {% if contact.instagram %}<a href="{{ contact.instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>{% endif %}
+            {% if contact.linkedin %}<a href="{{ contact.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a>{% endif %}
+        </div>
+    </nav>
+    <div id="google-review"></div>
+    <div id="menu-open">
+        <i class="fa fa-bars"></i>
+    </div>
+</header>

@@ -1,0 +1,40 @@
+{
+  "name": "ardigitalsolutions",
+  "version": "1.0.0",
+  "description": "AR Digital Solutions Website",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "start": "cross-env ELEVENTY_ENV=development NODE_ENV=development npm-run-all --parallel dev:*",
+    "build": "cross-env ELEVENTY_ENV=production NODE_ENV=production npm-run-all build:tailwind build:eleventy",
+    "dev:eleventy": "npx eleventy --serve",
+    "dev:tailwind": "npx tailwindcss -i tailwind.css -c tailwind.config.js -o dist/assets/css/tailwind.css --watch",
+    "build:eleventy": "cross-env ELEVENTY_PRODUCTION=true eleventy",
+    "build:tailwind": "npx tailwindcss -i tailwind.css -c tailwind.config.js -o dist/assets/css/tailwind.css --minify"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "clean-css": "^5.1.2",
+    "critical": "^3.0.0",
+    "cssesc": "^3.0.0",
+    "del-cli": "^3.0.1",
+    "dotenv": "^16.0.3",
+    "focus-trap": "^6.3.0",
+    "focus-visible": "^5.2.0",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.26.0",
+    "memfs": "^3.2.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.2.4",
+    "webpack": "^5.28.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

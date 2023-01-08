@@ -1,0 +1,62 @@
+<footer class="container md:flex justify-between">
+    <div id="footer-contact" class="leading-tight text-sm">
+        <h5>Contact</h5>
+        <div class="mb-2">
+            {{ contact.company }}<br>
+            {{ contact.address.address1 }}<br>
+            {% if contact.address.address2 %}{{ contact.address.address2 }}<br>{% endif %}
+            {{ contact.address.town }}<br>
+            {{ contact.address.county }}<br>
+            {{ contact.address.postcode }}
+        </div>
+        {% if contact.address2 %}
+        <div class="mb-3">
+            <span class="font-bold underline">{{ contact.address2.name }}</span><br>
+            {{ contact.address2.address1 }}<br>
+            {% if contact.address2.address2 %}{{ contact.address2.address2 }}<br>{% endif %}
+            {{ contact.address2.town }}<br>
+            {{ contact.address2.county }}<br>
+            {{ contact.address2.postcode }}
+        </div>
+        {% endif %}
+        <div class="mb-3">
+            <a class="block font-bold text-2xl" href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a>
+            <a class="block text-xl" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+        </div>
+        {% if contact.openingTimes %}
+            <div class="mb-8">Opening Times {{ contact.openingTimes }}</div>
+        {% endif %}
+        <small>© Copyright 2010-2022 AR Digital Solutions Ltd<br>Company registered in England Reg No. 07476134 | VAT No. GB 104 1408 70</small>
+    </div>
+    <nav id="footer-nav" class="hidden md:flex">
+        <div class="google-review"></div>
+        <div>
+            <h5>Company</h5>
+            <ul class="list-none">
+                <li><a href="{{ '/about' | url }}">About</a></li>
+                <li><a href="{{ '/faq' | url }}">FAQs</a></li>
+                <li><a href="{{ '/grant-funding' | url }}">Grant Funding</a></li>
+                <li><a href="{{ '/partners' | url }}">Partners</a></li>
+                <li><a href="{{ '/careers' | url }}">Careers</a></li>
+                <li><a href="{{ '/contact' | url }}">Contact</a></li>
+            </ul>
+            <h5>Policies</h5>
+            <ul class="list-none">
+                <li><a href="{{ '/_data-protection' | url }}">Data Protection</a></li>
+                <li><a href="{{ '/privacy-policy' | url }}">Privacy Policy</a></li>
+                <li><a href="{{ '/terms' | url }}">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Services</h5>
+            <ul class="list-none">
+                <li><a href="{{ '/services/applications' | url }}">Website & Mobile Applications</a></li>
+                <li><a href="{{ '/services/web-design' | url }}">Website Design</a></li>
+                <li><a href="{{ '/services/support' | url }}">Terms & Conditions</a></li>
+                <li><a href="{{ '/services/ecommerce' | url }}">eCommerce</a></li>
+                <li><a href="{{ '/services/hosting' | url }}">Hosting & Cloud Services</a></li>
+                <li><a href="{{ '/services/seo' | url }}">Search Engine Optimisation (SEO)</a></li>
+            </ul>
+        </div>
+    </nav>
+</footer>

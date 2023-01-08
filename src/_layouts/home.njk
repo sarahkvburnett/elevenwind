@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+<head>
+    {% include "meta.njk" %}
+    {% block head %}{% endblock %}
+    <title>{{ contact.name }}</title>
+</head>
+<body>
+<div id="hero" class="bg-grey bg-[url('{{'artwork/hero.png' | image}}')]">
+    {% include "header.njk" %}
+    {% block hero %}{% endblock %}
+</div>
+<main>
+    {% block main %}{% endblock %}
+</main>
+{% include "footer.njk" %}
+</body>
+</html>

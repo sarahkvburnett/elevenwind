@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        @apply text-base;
+    }
+
+    h1,h2,h3,h4,h5 {
+        @apply font-bold;
+    }
+
+    h1, .h1 {
+        @apply text-4xl;
+    }
+
+    h2, .h2 {
+        @apply text-3xl;
+    }
+
+    h3, .h3 {
+        @apply text-2xl;
+    }
+
+    h4, .h4 {
+        @apply text-xl;
+    }
+
+    h5, .h5 {
+        @apply text-base;
+    }
+
+    small {
+        @apply text-sm;
+    }
+
+    a {
+        @apply break-all;
+    }
+}
+
+@layer utilities {
+
+    .list-tick li {
+        @apply flex my-3 before:text-green before:font-bold before:text-2xl;
+    }
+
+    .list-cross li {
+        @apply flex my-3 before:text-red before:font-bold before:text-2xl;
+    }
+
+   /*!* Buttons *!*/
+   /* .btn {*/
+   /*     @apply py-2 px-8 rounded-3xl inline-block transition-all*/
+   /* }*/
+
+   /* !* Breadcrumb *!*/
+   /* .breadcrumb {*/
+   /*     @apply flex list-none;*/
+   /* }*/
+
+   /* .breadcrumb-item:not(:last-child) a:after {*/
+   /*     @apply pl-2 mr-2 content-['>']*/
+   /* }*/
+
+   /* .breadcrumb-item:last-child {*/
+   /*     @apply text-bold;*/
+   /* }*/
+
+}
+
+

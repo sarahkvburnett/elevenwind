@@ -1,0 +1,31 @@
+{# General #}
+<meta name="description" content="{{ description or meta.description }}">
+<link rel="canonical" href="{{ page.url }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{# Open Graph #}
+<meta property="og:site_name" content="{{ meta.title }}">
+<meta property="og:title" content="{{ title or meta.title }}">
+<meta property="og:description" content="{{ description  or meta.description }}">
+<meta property="og:url" content="{{ page.url }}">
+<meta property="og:locale" content="{{ meta.locale }}">
+<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
+{%- if image -%}
+    <meta property="og:image" content="{{ image | url }}">
+{%- endif -%}
+
+{# Favicon #}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}" sizes="16x16">
+<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | url }}">
+<meta name="theme-color" content="#1a1a1a">
+
+{# External Assets #}
+<script defer src="https://kit.fontawesome.com/1ab86dc102.js" crossorigin="anonymous"></script>
+
+{# Internal Assets #}
+<link rel="stylesheet" href="{{ '/css/tailwind.css' | asset }}"/>
+<link rel="stylesheet" href="{{ '/css/main.css' | asset }}"/>
+<script defer src="{{ '/js/main.js' | asset }}"></script>
