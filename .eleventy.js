@@ -1,12 +1,24 @@
 require('dotenv').config()
 
-const filters = require('./utils/filters.js')
+const filters = require('./utils/filters')
+const transforms = require('./utils/transforms')
+const shortcodes = require('./utils/shortcodes')
 
 module.exports = function (config) {
 
     // Add Filters
     Object.keys(filters).forEach((filterName) => {
         config.addFilter(filterName, filters[filterName])
+    })
+
+    // Transforms
+    Object.keys(transforms).forEach((transformName) => {
+        config.addTransform(transformName, transforms[transformName])
+    })
+
+    // Shortcodes
+    Object.keys(shortcodes).forEach((shortcodeName) => {
+        config.addShortcode(shortcodeName, shortcodes[shortcodeName])
     })
 
     // Asset Watch Targets

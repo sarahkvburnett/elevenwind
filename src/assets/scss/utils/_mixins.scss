@@ -1,0 +1,47 @@
+@mixin media-up($px) {
+    @media (min-width: $px) {
+        @content;
+    }
+}
+
+@mixin media-down($px) {
+    @media (max-width: $px) {
+        @content;
+    }
+}
+
+@mixin two-column-grid(){
+    display: grid;
+    gap: 1rem;
+    @media (min-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@mixin responsive-grid(){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    > div {
+        max-width: 100%;
+    }
+}
+
+@mixin fa-icon($icon){
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: $icon;
+    margin-right: 10px;
+}
+
+@mixin list(){
+    li {
+        font-size: 0.9rem;
+        display: flex;
+        margin: .25rem 0;
+        &:before {
+            font-weight: 900;
+            font-size: 1.2rem;
+            margin-top: -4px;
+        }
+    }
+}

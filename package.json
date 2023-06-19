@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development NODE_ENV=development npm-run-all --parallel dev:*",
+    "dev": "cross-env ELEVENTY_ENV=development NODE_ENV=development npm-run-all --parallel dev:*",
     "build": "cross-env ELEVENTY_ENV=production NODE_ENV=production npm-run-all build:tailwind build:eleventy",
     "dev:eleventy": "npx eleventy --serve",
     "dev:tailwind": "npx tailwindcss -i tailwind.css -c tailwind.config.js -o dist/assets/css/tailwind.css --watch",

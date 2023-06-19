@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --container-padding-x: 3%;
+        --section-padding-y: 2rem;
+    }
+
     * {
         box-sizing: border-box;
     }
@@ -48,31 +53,22 @@
 
 @layer utilities {
 
-    .list-tick li {
-        @apply flex my-3 before:text-green before:font-bold before:text-2xl;
-    }
+   /*!* Colors *!*/
 
-    .list-cross li {
-        @apply flex my-3 before:text-red before:font-bold before:text-2xl;
+   /*!* Layout *!*/
+    .container {
+        padding-left: var(--container-padding-x);
+        padding-right: var(--container-padding-x);
+        max-width: 100%;
     }
 
    /*!* Buttons *!*/
-   /* .btn {*/
-   /*     @apply py-2 px-8 rounded-3xl inline-block transition-all*/
-   /* }*/
+
+   /*!* List *!*/
 
    /* !* Breadcrumb *!*/
-   /* .breadcrumb {*/
-   /*     @apply flex list-none;*/
-   /* }*/
 
-   /* .breadcrumb-item:not(:last-child) a:after {*/
-   /*     @apply pl-2 mr-2 content-['>']*/
-   /* }*/
 
-   /* .breadcrumb-item:last-child {*/
-   /*     @apply text-bold;*/
-   /* }*/
 
 }
 
