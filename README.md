@@ -1,5 +1,7 @@
 # Elevenwind
 
+PLEASE USE ELEVENPACKED INSTEAD
+
 An Eleventy Starter Kit, my base for all new 11ty projects now with Tailwind.css
 
 Based of [Eleventastic](https://github.com/maxboeck/eleventastic/tree/master) (no external build, maintains manifest.json)
